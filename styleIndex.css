@@ -1,0 +1,762 @@
+
+html {
+    scroll-behavior:smooth;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url('imgs/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparent */
+    z-index: -1;
+}
+
+
+header {
+    background-color: darkgrey;
+    color: blanchedalmond;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/*nav {
+    display: flex;
+    align-items: center;
+}*/
+/*nuevo menu hamburguesa*/
+.menu-btn {
+    margin-left: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  
+    /*display: flex;*/
+    position: relative;
+    justify-content: space-between;
+    height: 20px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu-btn div {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .activelinea1__btn-menu {
+    transform: rotate(45deg) 
+    translate(-10px, 2px);
+  }
+  
+  .activelinea2__btn-menu {
+    opacity: 0;
+    margin-left: -30px;
+  
+  }
+  
+  .activelinea3__btn-menu {
+    transform: rotate(-45deg) 
+    translate(-10px, -2px);
+  }
+
+  .contenedorBarra {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+
+  }
+  
+  
+
+  .menu.active {
+    display: block;
+  }
+  
+  .menu .menu-options {
+    list-style: none;
+    padding: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 150px;
+    right: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+  }
+  
+  .menu .menu-options li {
+    padding: 10px 0;
+  }
+  
+  .menu .menu-options li a {
+    color: skyblue;
+    text-decoration: none;
+  }
+  .menu-name {
+    margin: 50px 0 0 0;
+    flex-direction: column;    
+    background-color: #333;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    color: #fff;
+    z-index: 300;
+}
+.menu-name svg {
+    margin-right: 10px;
+    
+}
+
+
+/*.listaNav {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.listaNav li {
+    margin-right: 20px;
+}
+
+.listaNav li button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+body {
+    margin: 0; 
+    padding: 0; 
+}*/
+
+
+    
+@media only screen and (min-width: 600px) {
+    .header h1 {
+        margin-right: 100px;
+    }
+    .menu-btn {
+        display: none;
+    }
+
+    .menu {
+    margin-top: 20px;
+    display: block; /* Muestra el menú en pantallas grandes */
+    position: static;
+    display: flex;
+    align-items: center;
+    margin-right: 400px;
+  }
+
+  
+  .menu .menu-options {
+    align-items: start;
+    position: static; /* Cambia la posición a estática para que el menú aparezca en línea */
+    display: flex; /* Muestra las opciones del menú una al lado de la otra */
+    background-color: transparent; /* Opcional: elimina el fondo del menú si no lo necesitas */
+    z-index: auto; /* Reinicia el valor de z-index si no lo necesitas */
+  }
+
+  .menu .menu-options li {
+    padding: 0 20px; /* Ajusta el espacio entre elementos según tu necesidad */
+  }
+    .menu.menu-options {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        position: fixed;
+        top: 50px; /* Ajusta la posición superior según tu necesidad */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-name {
+        display: none;
+    }
+    
+    .menu .menu-options p {
+        text-align: center;
+        font-family: monospace;
+        font-size: 18px;
+    }
+    .menu .menu-options i.fa-home {
+        margin-left: 12px;
+        align-items: center;
+    }
+
+    .menu .menu-options i.fa-drum {
+        margin-left: 30px;
+        align-items: center;
+    }
+
+    .menu .menu-options i.fa-envelope {
+        margin-left: 25px;
+        align-items: center;
+    }
+
+    .menu .menu-options i.fa-address-card {
+        margin-left: 30px;
+        align-items: center;
+    }
+
+    .menu .menu-options i.fa-phone-alt {
+        margin-left: 25px;
+        align-items: center;
+    }
+
+    .menu .menu-options li {
+        padding: 0 10px;
+        display: inline-block;
+    }
+    
+    .menu .menu-options li a {
+        color: skyblue;
+        text-decoration: none;
+    }
+
+    .menu .menu-options i {
+        display: flex;
+    }
+}
+    
+
+
+/*.iconoHamburguesa.active{
+    display: block;
+}
+.iconoHamburguesa {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+  }
+
+  .iconoHamburguesa ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .iconoHamburguesa ul li {
+      padding: 10px 0;
+  }
+.iconoHamburguesa span {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    height: 2px;
+    background-color: skyblue;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 0.3s;
+}
+
+.Activeline1--iconoHamburguesa{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.Activeline2--iconoHamburguesa {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    opacity: 0;
+    margin-left: -30px;
+}
+.Activeline3--iconoHamburguesa {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+.ActiveiconoHamburguesa {
+    display: block;
+}*/
+
+@media only screen and (max-width: 600px) {
+
+    .menu-btn {  
+
+    position: fixed;
+    left: 90%;
+    margin-bottom: 20px;
+    z-index: 1000;
+    }
+    .menu {
+        flex-direction: column;
+        top: 60px;
+        width: 30%;
+        height: 30%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo translúcido */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .menu .menu-name {
+        display: flex;
+        align-items: center;
+        height: 20%;
+        width: 20%;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5) ;
+    }
+
+    .menu-name .logo {
+        align-items: center;
+        display: flex;
+    }
+
+    .menu .menu-name h4 {
+        font-size: 20px;
+
+        padding-bottom: 30px;
+    }
+
+    
+    
+
+    .menu .menu-options {
+        box-sizing: 60px;
+        width: 20%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .menu .menu-options p {
+        display: none;
+    }
+
+    .menu .menu-options i.fa-home {
+        margin-left: 30px;
+    }
+
+    .menu .menu-options i.fa-drum {
+        margin-left: 30px;
+    }
+
+    .menu .menu-options i.fa-envelope {
+        margin-left: 30px;
+    }
+
+    .menu .menu-options i.fa-address-card {
+        margin-left: 30px;
+    }
+
+    .menu .menu-options i.fa-phone-alt {
+        margin-left: 30px;
+    }
+    /*.iconoHamburguesa {
+        display: block;
+    }
+    
+
+    .listaNav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo translúcido */
+        /*z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+        /*display: none; /* Inicialmente oculto */
+        /*flex-direction: column;
+        /*padding-top: 60px; /* Espacio para el encabezado} */
+    
+
+    /*.listaNav button {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .listaNav button:hover {
+        background-color: #555; 
+    }
+
+
+    .listaNav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 1; 
+    }
+
+    .listaNav .show{
+        display: flex;
+    }
+
+    .listaNav button {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .listaNav button:hover {
+        background-color: #555;
+    }*/
+}
+
+
+.carousel-inner img {
+    height: 500px; 
+    object-fit: cover; 
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.servicios h2 {
+    margin-top: 0;
+    color: aqua;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.servicio {
+    max-width: 200px;
+    margin: 15px;
+    flex: 0 0 48%; 
+    background-color: #87CEEB; 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.composicion {
+    max-width: 200px;
+    margin: 15px;
+    flex: 0 0 48%; 
+    background-color: #87CEEB; 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.composicion img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.servicioContenedor {
+    transition: transform 0.6s ease-in-out;
+    }
+    .servicioContenedor:hover {
+        transform: scale(1.02);
+    }
+
+.servicio img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.servicio h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: darkolivegreen;
+}
+
+.servicio p {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 800px) {
+    .servicios {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .servicios h2 {
+        margin-top: 0;
+    }
+    
+    .servicioContenedor {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .servicio {
+        flex: 0 0 48%; 
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .servicio img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .servicio h3 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    
+    .servicio p {
+        font-size: 14px;
+    }
+}
+
+
+.proyectos {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.proyectos h2 {
+    margin-top: 0;
+    color: aqua;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.proyectos h3 {
+    margin-top: 0;
+    color: snow;
+}
+
+.contenedorProyecto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.proyecto {
+    flex: 0 0 48%; /* Ajusta el ancho de cada proyecto para que haya dos en una fila */
+    background-color: #87CEEB; 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.6s ease-in-out;
+}
+
+.proyecto:hover {
+    transform: scale(1.02);
+}
+
+.proyecto h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+}
+
+
+.audioContenedor {
+    margin-bottom: 10px;
+}
+
+#acercadeNosotros {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#acercadeNosotros h2 {
+    margin-top: 0;
+    color: aqua;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);;
+}
+
+.descripcion {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+}
+.descripcion p {
+    color: aquamarine;
+}
+.descripcionContenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(135, 206, 235, 0.5); 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box
+}
+
+
+.mision {
+    display: inline-block;
+   width: 100%;
+    color: aquamarine;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+}
+.misionpContenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(135, 206, 235, 0.5); 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width:100%;
+}
+
+.vision {
+    display: inline-block;
+    width: 100%;
+    color: aquamarine;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+}
+.visionpContenedor{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(135, 206, 235, 0.5); 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width:100%;    
+}
+
+@media only screen and (max-width: 600px) {
+    .misionpContenedor {
+        width: 100%;
+    }
+
+    .visionpContenedor {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .mision-vision {
+        display: flex;
+        justify-content: space-around;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+    }
+    .descripcion {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        color: aquamarine;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+    }
+    .mision {
+        max-width: 600px;
+        color: aquamarine;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+    }
+    .vision {
+        max-width: 600px;
+        color: aquamarine;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .misionpContenedor,
+    .visionpContenedor {
+        width: 100%;
+    }
+}
+#contacto {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#contacto p {
+    
+    margin-top: 0;
+    color: aquamarine;
+}
+
+#contacto h2 {
+    margin-top: 0;
+    color: aqua;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+#contacto a {
+    font-size: 15px;
+    color: aquamarine;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: aquamarine;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: bisque;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer{
+    text-align: center;
+    margin: auto;
+    color: aquamarine;
+}

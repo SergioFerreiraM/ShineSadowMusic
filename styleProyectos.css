@@ -1,0 +1,176 @@
+
+html {
+    scroll-behavior:smooth;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url('imgs/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparent */
+    z-index: -1;
+}
+
+
+header {
+    background-color: darkgrey;
+    color: blanchedalmond;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.contenedorBarra {
+    display: flex;
+    align-items:center;
+}
+
+.listaNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.listaNav li {
+    margin-right: 20px;
+}
+
+.listaNav button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+body {
+    margin: 0; 
+    padding: 0; 
+}
+
+@media only screen and (min-width: 800px) {
+    .listaNav li {
+        margin-right: 20px;
+    }
+}
+
+
+.iconoHamburguesa {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .iconoHamburguesa {
+        display: block;
+        position: relative; 
+        z-index: 1; 
+    }
+    .espacio {
+        height: 105px; 
+    }
+
+    .listaNav {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .contenedorBarra.listaNav.show {
+        display: flex; 
+    }
+}
+
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.proyectos h1 {
+    text-align: center;
+    font-size: 50px;
+    color: skyblue;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.proyectos h2 {
+    text-align: center;
+    font-size: 25px;
+    color: skyblue;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.proyectos h3 {
+    margin-top: 0;
+    color: snow;
+}
+
+.contenedorProyecto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.proyecto {
+    flex: 0 0 48%; /* Ajusta el ancho de cada proyecto para que haya dos en una fila */
+    background-color: #87CEEB; 
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.6s ease-in-out;
+}
+
+.proyecto:hover {
+    transform: scale(1.02);
+}
+
+.proyecto h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+}
+
+
+.audioContenedor {
+    margin-bottom: 10px;
+}
