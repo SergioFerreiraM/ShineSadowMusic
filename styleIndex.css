@@ -18,7 +18,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparent */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: -1;
 }
 
@@ -172,7 +172,7 @@ body {
 
     .menu {
     margin-top: 20px;
-    display: block; /* Muestra el menú en pantallas grandes */
+    display: block; 
     position: static;
     display: flex;
     align-items: center;
@@ -182,21 +182,21 @@ body {
   
   .menu .menu-options {
     align-items: start;
-    position: static; /* Cambia la posición a estática para que el menú aparezca en línea */
-    display: flex; /* Muestra las opciones del menú una al lado de la otra */
-    background-color: transparent; /* Opcional: elimina el fondo del menú si no lo necesitas */
-    z-index: auto; /* Reinicia el valor de z-index si no lo necesitas */
+    position: static; 
+    display: flex; 
+    background-color: transparent; 
+    z-index: auto; 
   }
 
   .menu .menu-options li {
-    padding: 0 20px; /* Ajusta el espacio entre elementos según tu necesidad */
+    padding: 0 20px; 
   }
     .menu.menu-options {
         list-style: none;
         padding: 0;
         display: flex;
         position: fixed;
-        top: 50px; /* Ajusta la posición superior según tu necesidad */
+        top: 50px; 
         justify-content: space-between;
         align-items: center;
     }
@@ -320,8 +320,8 @@ body {
         top: 60px;
         width: 30%;
         height: 30%;
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo translúcido */
-        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+        background-color: rgba(0, 0, 0, 0.8); 
+        z-index: 1000; 
     }
 
     .menu .menu-name {
@@ -387,11 +387,11 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo translúcido */
-        /*z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-        /*display: none; /* Inicialmente oculto */
+        background-color: rgba(0, 0, 0, 0.8); 
+        /*z-index: 1000; 
+        /*display: none; 
         /*flex-direction: column;
-        /*padding-top: 60px; /* Espacio para el encabezado} */
+        /*padding-top: 60px; 
     
 
     /*.listaNav button {
@@ -566,7 +566,7 @@ body {
 }
 
 .proyecto {
-    flex: 0 0 48%; /* Ajusta el ancho de cada proyecto para que haya dos en una fila */
+    flex: 0 0 48%; 
     background-color: #87CEEB; 
     text-align: center;
     margin-bottom: 15px;
@@ -583,7 +583,7 @@ body {
 .proyecto h3 {
     margin-top: 10px;
     font-size: 18px;
-    color: #fff; /* Texto blanco */
+    color: #fff; 
 }
 
 
